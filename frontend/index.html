@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Fullstack</title>
+</head>
+  <div id="result"></div>
+  <h1>Login</h1>
+  <form>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="username" class="form-control w-50" id="username" placeholder="Enter username">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control w-50" id="password" placeholder="Password">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary" id="loginBtn">Login</button>
+    <button type="submit" class="btn btn-primary" id="logoutBtn">Logout</button>
+  </form>
+
+  <br>
+
+  <h1>Register</h1>
+  <form>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="username" class="form-control w-50" id="regUsername" placeholder="Enter username">
+      <small id="usernameHelp" class="form-text text-muted">Don't worry, you can change this later!</small>
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" class="form-control w-50" id="regEmail" placeholder="Enter Email">
+    </div>
+    <br>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control w-50" id="regPassword" placeholder="Password">
+    </div>
+    <br>
+    <button type="submit" class="btn btn-primary" id="registerBtn">Register</button>
+  </form>
+
+  <br>
+
+  <h1>Add Product Form</h1>
+  <form>
+      <!-- <label class="mr-5" for="a-productId"> Enter product Id: </label>
+      <input type="text" class="ml-5 rounded-pill" id="a-productId" name="inputId" >
+      <br><br> -->
+
+      <label class="mr-4" for="a-name"> Enter name of the product </label>
+      <input type="text" id="prodName" name="productName" class="form-control w-50">
+      <br>
+      <label class="mr-4" for="a-price"> Enter price of the product </label>
+      <input type="number" id="prodPrice" name="productPrice" class="form-control w-50">
+      <br>
+       <label class="mr-5" for="a-imageurl"> Enter the image url </label>
+      <input type="text" id="prodImageUrl" name="prodImageUrl" class="form-control w-50">
+      <br>
+      <button id="addProduct" name="productButton" type="submit" class="btn btn-primary">Add product</button>
+  </form>
+  <br>
+  <h1>Update Product</h1>
+  <form>
+    <label class="mr-5" for="productId"> Enter product Id: </label>
+    <input type="text" class="form-control w-50" id="productId" name="inputId" >
+    <br>
+    <label class="mr-4" for="productName"> Enter name of the product </label>
+    <input type="text" id="productName" name="productName" class="form-control w-50">
+    <br>
+    <label class="mr-4" for="productPrice"> Enter price of the product </label>
+    <input type="number" id="productPrice" name="productPrice" class="form-control w-50">
+    <br>
+    <label class="mr-5" for="imageurl"> Enter the image url </label>
+   <input type="text" class="form-control w-50" id="imageurl" name="imageurl" >
+   <br>
+    <button id="updateProduct" name="productButton" type="submit" class="btn btn-primary">Update product</button>
+  </form>
+
+  <br>
+
+  <h1>Delete Product</h1>
+  <form id="delForm" class="">
+    <label class="mr-5" for="delProductId"> Enter product Id to delete: </label>
+    <input type="text" class="form-control w-50" id="delProductId" name="inputId" >
+    <br>
+      <button id="deleteProduct" name="productButton" type="submit" class="btn btn-primary">Delete product</button>
+  </form>
+</body>
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="js/config.json"></script>
+<script src="js/custom.js"></script>
+</html>

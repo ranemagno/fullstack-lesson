@@ -1,6 +1,25 @@
 $(document).ready(function(){
+  let url = 'http://fullstack-virtual-host:3000';
+  // let url; //es6 way of declaring a var
+
+// THERE IS AN ISSUE WITH THIS CODE
+  // $.ajax({
+  //   url: 'config.json',
+  //   type: 'GET',
+  //   dataType: 'json',
+  //   success: function(config){
+  //     console.log(config);
+  //     url = `${config.SERVER_URL}:${config.SERVER_PORT}`;
+  //     console.log(url);
+  //   },
+  //   error: function(error){
+  //     console.log('ERROR');
+  //     console.log(error);
+  //   }
+  // }); //ajax server config
+
   $.ajax({
-    url: 'http://192.168.33.10:3000/allProducts',
+    url: `${url}/allProducts`,
     type: 'GET',
     datatype: 'json',
     success: function(productsFromMongo){
@@ -11,27 +30,10 @@ $(document).ready(function(){
       }
     }, // success
     error:function(){
+      console.log('NOT WORKING');
     }
   }); // ajax mongo
-
-  let url = 'http://192.168.33.10:3000'; //es6 way of declaring a var
-
-// This is supposed to take from the config.json file and set url to the data, not sure if it cannot find the json file but it always returns an error
-  $.ajax({
-    url: 'config.json',
-    type: 'GET',
-    dataType: 'json',
-    success: function(configData){
-      console.log(configData);
-      url = `${config.SERVER_URL}:${config.SERVER_PORT}`;
-      console.log(url);
-    },
-    error: function(error){
-      console.log('ERROR');
-      console.log(error);
-    }
-  }); //ajax server config
-
+  
 // Register User
   $('#registerBtn').click(function(){
     event.preventDefault(); //this prevents code breaking when no data is found

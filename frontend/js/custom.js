@@ -1,22 +1,22 @@
 $(document).ready(function(){
-  let url = 'http://fullstack-virtual-host:3000';
-  // let url; //es6 way of declaring a var
+  // let url = 'http://fullstack-virtual-host:3000';
+  let url; //es6 way of declaring a var
 
 // THERE IS AN ISSUE WITH THIS CODE
-  // $.ajax({
-  //   url: 'config.json',
-  //   type: 'GET',
-  //   dataType: 'json',
-  //   success: function(config){
-  //     console.log(config);
-  //     url = `${config.SERVER_URL}:${config.SERVER_PORT}`;
-  //     console.log(url);
-  //   },
-  //   error: function(error){
-  //     console.log('ERROR');
-  //     console.log(error);
-  //   }
-  // }); //ajax server config
+  $.ajax({
+    url: 'config.json',
+    type: 'GET',
+    dataType: 'json',
+    success: function(config){
+      console.log(config);
+      url = `${config.SERVER_URL}:${config.SERVER_PORT}`;
+      console.log(url);
+    },
+    error: function(error){
+      console.log('ERROR');
+      console.log(error);
+    }
+  }); //ajax server config
 
   $.ajax({
     url: `${url}/allProducts`,
@@ -33,7 +33,7 @@ $(document).ready(function(){
       console.log('NOT WORKING');
     }
   }); // ajax mongo
-  
+
 // Register User
   $('#registerBtn').click(function(){
     event.preventDefault(); //this prevents code breaking when no data is found

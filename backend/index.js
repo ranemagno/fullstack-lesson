@@ -150,7 +150,7 @@ app.patch('/updateProduct/:id', (req, res) => {
         name: req.body.name,
         price: req.body.price,
         image_url: req.body.imageUrl
-        // so the body in question here is pulling from the postman body when you type in there to update, it makes sense
+        // so the body in question here is pulling from the postman body when you type in there to update, do you understand?
       }
       Product.updateOne({_id: idParam}, updatedProduct)
         .then(result => {res.send(result)})
